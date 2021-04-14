@@ -11,7 +11,7 @@
         <img src="/storage/{{ $receta->imagen }}" class="w-100">
     </div>
 
-    <div class="receta-meta mt-2">
+    <div class="receta-meta mt-3">
         <p>
             <span class="font-weight-bold text-primary">Escrito en</span>
             {{ $receta->categoria->nombre }}
@@ -19,7 +19,7 @@
 
         <p>
             <span class="font-weight-bold text-primary">Autor:</span>
-            {{-- ToDo: mostrar el usuario --}}
+            <a class="text-dark" href="{{ route('perfiles.show', ['perfil' => $receta->autor->id ] )}}"></a>
             {{ $receta->autor->name}}
         </p>
 
